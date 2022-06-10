@@ -11,6 +11,7 @@ import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import packageData from '../package.json';
 
 class App {
   public app: express.Application;
@@ -24,7 +25,6 @@ class App {
   }
 
   async init() {
-    console.log('test', this.port)
     this._initializeMiddlewares();
     this._initializeRoutes();
     this._initializeSwagger();
@@ -34,7 +34,7 @@ class App {
 
   private _listen() {
     this.app.listen(this.port, () => {
-      logger.info(`=================================`);
+      logger.info(`${packageData.author}`);
       logger.info(`======= ENV: ${this.env} =======`);
       logger.info(`🚀 App listening on the port ${this.port}`);
       logger.info(`=================================`);
