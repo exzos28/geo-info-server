@@ -1,5 +1,8 @@
 ## Quick Overview
 
+The backend is deployed here -
+https://blooming-plateau-14609.herokuapp.com/
+
 ![Image 1](./img.png)
 
 ## Zadanie 1
