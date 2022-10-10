@@ -34,13 +34,3 @@ ENV NODE_ENV production
 CMD ["npm", "run", "start"]
 ```
 
-## Zadanie 3
-
-```sh
-docker-compose --project-name app build
-docker container run app_server
-docker exec 2c376058afb4 cat src/logs/debug/2022-06-09.log
-```
-
-![Image 3c](./img_3.c.png)
-![Image 3c](./img_3.d.png)
