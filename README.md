@@ -5,18 +5,11 @@ https://blooming-plateau-14609.herokuapp.com/
 
 ![Image 1](./img.png)
 
-## Zadanie 1
-```sh
-docker-compose up -d
-```
-
-## Zadanie 2
-
 ```sh
 # Common build stage
 
 FROM node:16 as common-build-stage
-LABEL author="Oleksandr Kurinnyi"
+LABEL author="exzos28"
 
 COPY . ./app
 
